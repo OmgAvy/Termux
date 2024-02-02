@@ -100,7 +100,7 @@ plugins=(
 	npm
 	sudo
 	history
-	auto-notify
+  # auto-notify
 	# zsh-autocomplete
 	zsh-autosuggestions
 	zsh-syntax-highlighting
@@ -191,4 +191,8 @@ rehash_precmd() {
 }
 
 add-zsh-hook -Uz precmd rehash_precmd
+
+# SSh for startup running
+sshd
+
 
