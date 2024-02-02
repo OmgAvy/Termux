@@ -1,0 +1,95 @@
+#------------------------------#
+#        ___                   #
+#       /   |_   ____  __      #
+#      / /| | | / / / / /      #
+#     / ___ | |/ / /_/ /       #
+#    /_/  |_|___/\__, /        #
+#               /____/         #
+#------------------------------#
+# git commands simplified
+alias gst='git status'
+alias gco='git checkout'
+alias gci='git commit'
+alias grb='git rebase'
+alias gbr='git branch'
+alias gad='git add -A'
+alias gsl='git stash list'
+alias gsapl='git stash apply'
+alias gsd='git stash drop'
+alias gss='git stash save'
+alias gpl='git pull'
+alias gpo='git pull origin'
+alias gpm='git push origin master'
+alias glg='git log --date-order --all --graph --name-status --format="%C(green)%H%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"'
+
+# git Reset and clean
+function gitr() {
+    git config user.email && git config user.name
+    git checkout -b "$@"
+    gst
+    git reset --hard origin/master
+    gst
+    git clean -df
+    gst
+    git pull origin master
+    gst
+}
+
+# For package updates
+alias upgrade='pkg upgrade'
+alias update='pkg update'
+alias install='pkg install'
+alias uninstall='pkg uninstall'
+alias autoremove='apt autoremove'
+alias search='pkg search'
+
+# See global installed packages
+alias npm-ls='npm list -g --depth=0'
+
+# up 'n' folders
+alias ..='cs ..'
+alias ...='cs ../..'
+alias ....='cs ../../..'
+alias .....='cs ../../../..'
+
+# copy codebase files
+# MongoDb
+alias startmd='sudo service mongod start'
+alias stopmd='sudo service mongod stop'
+alias restartmd='sudo service mongod restart'
+
+# To compile C files
+function runc() {
+    gcc "$@" -o test
+}
+
+# ls aliases without headers, but with color
+alias ls='ls --color=always'
+alias lh='ls -lhaG --color=always' 
+alias ll='ls -lAh --color=always'  # Detailed list view, including hidden files
+alias la='ls -AFh --color=always'  # All files, including hidden, with indicators
+alias l='ls -Fh --color=always'  # Basic file list with indicators
+
+#-------------------------------- MY Aliases --------------------------------#
+# refresh shell
+alias reload='source ~/.bash_profile'
+alias x='exit'
+
+# History location 
+alias histf="nano ~/.cache/zsh/history"
+
+alias jn='jupyter notebook'
+alias py='python3'
+
+# PYTHON VIRTUAL ENVIRONMENT
+alias mypy='currentPath=$PWD; $HOME ; source .mypy/bin/activate; cd $currentPath;echo "Python Virtual Environment ( .mypy/bin/activate ) is Activated.
+To Deactivate the Virtual Environment Type ~> deactivate"'
+
+#adb server
+sss(){
+    a=$(adb connect 192.168.1.101:5555);notify-send "$a (RealMe)"
+    sleep 0.5
+    b=$(adb connect 192.168.1.102:5555);notify-send "$b (Redmi)"
+}
+
+alias nv='nvim'
