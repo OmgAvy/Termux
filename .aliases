@@ -92,4 +92,4 @@ sss(){
     b=$(adb connect 192.168.1.102:5555);notify-send "$b (Redmi)"
 }
 
-alias nv='nvim'
+alias v='nvim'

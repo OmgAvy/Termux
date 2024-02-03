@@ -115,9 +115,12 @@ bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 
 # Delete previous word with ctrl+backspace
-bindkey '^H' backward-kill-word    
+bindkey "^H" backward-kill-word    
+bindkey "^Z" undo 
+bindkey "^[[1;2D" backward-word 
+bindkey "^[[1;2C" forward-word 
 
-# User configuration
+#User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -194,5 +197,6 @@ add-zsh-hook -Uz precmd rehash_precmd
 
 # SSh for startup running
 sshd
-
+# Welcome message
+# toilet 'Welcome Avy :)' -F border --gay
 
