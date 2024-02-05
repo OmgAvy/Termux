@@ -33,7 +33,7 @@ chmod +x .scripts/install_zsh_ohmyzsh.sh .scripts/install_zsh_ohmyzsh_plugins.sh
 ## Vim-Dot files Intallation 
 Credits - [Majixed](https://github.com/Majixed/vim-dotfiles)
 ```bash
-git clone --depth 1 https://github.com/OmgAvy/Linux.git && mv Linux/.vim ~/ && rm -rf Linux
+git clone --depth 1 https://github.com/OmgAvy/Termux.git && mv Termux/.vim ~/ && rm -rf Termux
 ```
 
 This guide helps enhance your Ubuntu environment with Vim, Zsh and Oh My Zsh for an improved terminal experience.
