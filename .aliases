@@ -36,10 +36,11 @@ function gitr() {
 }
 
 # For package updates
+alias uu='pkg update && pkg upgrade'
 alias upgrade='pkg upgrade'
 alias update='pkg update'
 alias install='pkg install'
-alias uninstall='pkg uninstall'
+alias uinstall='pkg uninstall'
 alias autoremove='apt autoremove'
 alias search='pkg search'
 
@@ -64,19 +65,20 @@ function runc() {
 }
 
 # ls aliases without headers, but with color
-alias ls='ls --color=always'
 alias lh='ls -lhaG --color=always' 
 alias ll='ls -lAh --color=always'  # Detailed list view, including hidden files
 alias la='ls -AFh --color=always'  # All files, including hidden, with indicators
 alias l='ls -Fh --color=always'  # Basic file list with indicators
+alias ls='ls --color=always'
 
 #-------------------------------- MY Aliases --------------------------------#
 # refresh shell
-alias reload='source ~/.bash_profile'
+alias reloadbash='source ~/.bash_profile'
+alias reloadzsh='source ~/.zshrc'
 alias x='exit'
 
 # History location 
-alias histf="nano ~/.cache/zsh/history"
+alias histf="vim ~/.cache/zsh/history"
 
 alias jn='jupyter notebook'
 alias py='python3'
@@ -92,4 +94,5 @@ sss(){
     b=$(adb connect 192.168.1.102:5555);notify-send "$b (Redmi)"
 }
 
+# neovim 
 alias v='nvim'

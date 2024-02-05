@@ -100,7 +100,7 @@ plugins=(
 	npm
 	sudo
 	history
-  # auto-notify
+	#auto-notify
 	# zsh-autocomplete
 	zsh-autosuggestions
 	zsh-syntax-highlighting
@@ -119,8 +119,8 @@ bindkey "^H" backward-kill-word
 bindkey "^Z" undo 
 bindkey "^[[1;2D" backward-word 
 bindkey "^[[1;2C" forward-word 
-
-#User configuration
+ 
+# User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -195,8 +195,6 @@ rehash_precmd() {
 
 add-zsh-hook -Uz precmd rehash_precmd
 
-# SSh for startup running
+# Start SHH
 sshd
-# Welcome message
-# toilet 'Welcome Avy :)' -F border --gay
 
