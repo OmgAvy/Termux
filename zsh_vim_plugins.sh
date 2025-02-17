@@ -10,7 +10,7 @@
 
 # Update package lists and install Zsh if not already installed
 pkg update
-pkg install -y zsh git vim wget
+pkg install -y zsh git vim wget ncurses-utils
 
 # Check if zsh is already the default shell
 if ! grep -Fxq "exec zsh" ~/.bashrc; then
