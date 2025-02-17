@@ -10,7 +10,7 @@
 
 # Update package lists and install Zsh if not already installed
 pkg update
-pkg install -y zsh
+pkg install -y zsh git vim wget
 
 # Check if zsh is already the default shell
 if ! grep -Fxq "exec zsh" ~/.bashrc; then
@@ -27,7 +27,7 @@ echo "Oh My Zsh installed successfully"
 
 # Download custom .zshrc file before sourcing it
 echo "Downloading Custom .zshrc file"
-curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.zshrc" -o ~/.zshrc
+curl "https://raw.githubusercontent.com/OmgAvy/Termux/main/.zshrc" -o ~/.zshrc
 
 # Source the Zsh configuration to apply changes
 source ~/.zshrc
@@ -41,7 +41,7 @@ mkdir -p "$ZSH_CACHE_DIR"
 touch "$ZSH_HISTORY_FILE"
 
 echo "Downloading .aliases file"
-curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.aliases" -o ~/.aliases
+curl "https://raw.githubusercontent.com/OmgAvy/Termux/main/.aliases" -o ~/.aliases
 
 # Set up ZSH_CUSTOM variable
 ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
